@@ -14,7 +14,7 @@ The environment consists of three Virtual Machines (VMs) connected to a single *
 - **Server**: Ubuntu (Running Nginx & SSH)
 - **Attacker**: Kali Linux
 
-![image.png](image.png)
+![images/image.png](image.png)
 
 To facilitate traffic interception in a virtualized environment, specific Hyper-V and OS-level settings were applied:
 
