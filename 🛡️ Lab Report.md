@@ -149,6 +149,11 @@ The following are the spoofed HTTP packets:
 And this are the spoofed SSH packets:
 
 ![image.png](images/image%2019.png)
+Observation on Encryption: Although the ARP spoofing was successful for both protocols, the impact was different:
+
+HTTP (Port 80): Because HTTP sends traffic in cleartext, the intercepted packets reveal the full content of the communication (e.g., the HTML code or credentials).
+
+SSH (Port 22): While we successfully intercepted the packets, the data payload remains encrypted. The attacker can see that communication is happening, but cannot read the content (commands or passwords).
 
 ## 3. Capture filtering and attack detection
 
