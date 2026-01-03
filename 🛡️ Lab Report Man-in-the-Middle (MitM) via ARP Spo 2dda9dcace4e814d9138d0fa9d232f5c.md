@@ -41,36 +41,12 @@ Configured via **Settings > Network & Internet > Ethernet**:
 - **IPv4 address**: `172.22.245.100`
 - **Subnet prefix length**: `16` (255.255.0.0)
 
-| VM | IPv4 address | MAC | Gateway
-(when not isolated) | listening ports | notes |
-| --- | --- | --- | --- | --- | --- |
-| client | 172.22.245.100 | 00:15:5d:38:01:02 | 172.22.240.1 | 4
-1036
-1180
-1216
-1480
-2564
-3136
-3180
-3984
-5852 | ipconfig
-arp -a
-netstat -rn
-netstat -aon |
-| kali | 172.22.245.120 | 00:15:5d:38:01:01 | 172.22.240.1 | - | ip addr
-arp -n
-ip r
-ss -tuln |
-| server | 172.22.245.110 | 00:15:5d:38:01:03 | 172.22.240.1 | 80
-53
-22
-631
-80
-22
-3350
-631 | ip addr
-ip r
-ss -tuln |
+| VM     | IPv4 address     | MAC              | Gateway (when not isolated) | Listening ports                         | Notes                                      |
+|--------|------------------|------------------|-----------------------------|-----------------------------------------|--------------------------------------------|
+| Client | 172.22.245.100   | 00:15:5d:38:01:02| 172.22.240.1                | 4, 1036, 1180, 1216, 1480, 2564, 3136, 3180, 3984, 5852 | ipconfig, arp -a, netstat -rn, netstat -aon |
+| Kali   | 172.22.245.120   | 00:15:5d:38:01:01| 172.22.240.1                | –                                       | ip addr, arp -n, ip r, ss -tuln            |
+| Server | 172.22.245.110   | 00:15:5d:38:01:03| 172.22.240.1                | 22, 53, 80, 631, 3350                   | ip addr, ip r, ss -tuln                    |
+
 
 **Installation and Configuration:**
 I set up the Nginx web server and SSH on the Ubuntu VM by running these commands:
