@@ -1,4 +1,4 @@
-# 🛡️ Lab Report: Man-in-the-Middle (MitM) via ARP Spoofing
+# 🛡️ Lab Report
 
 Lab by Maxim Mudryak
 
